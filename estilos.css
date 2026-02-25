@@ -1,0 +1,286 @@
+/* ===== RESET Y ESTILOS BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* 1rem = 16px (base del navegador) */
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente secundaria para textos largos */
+    font-weight: 300;
+    line-height: 1.6;
+    background-color: #F2E9E1; /* Color corporativo crema */
+    color: #3A281F; /* Color corporativo marrón oscuro */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Tipografía personalizada para títulos y elementos clave */
+h1, h2, h3, .logo-nombre, .nav-link, .btn, .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+/* Contenedor principal para centrar y dar ancho máximo */
+.wrapper {
+    max-width: 70rem; /* 1120px / 16 = 70rem */
+    margin: 0 auto;
+    padding: 0 1.5rem; /* 24px */
+    width: 100%;
+}
+
+/* ===== ENCABEZADO (HEADER) ===== */
+.header {
+    background-color: #3A281F; /* Marrón oscuro */
+    padding: 0.8rem 0;
+    border-bottom: 0.25rem solid #C46D5E; /* Terracota */
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.1);
+}
+
+.header .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Contenedor del logo (imagen + texto) */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo-img {
+    height: 3.5rem; /* 56px */
+    width: auto;
+    /* filter: brightness(1.1); */ /* Pequeño ajuste si la imagen se ve muy oscura */
+}
+
+.logo-nombre {
+    font-size: 2rem; /* 32px */
+    font-weight: 900;
+    color: #F2E9E1; /* Crema */
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+/* Menú de navegación */
+.nav-menu {
+    display: flex;
+    gap: 2rem; /* 32px */
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    font-size: 1.125rem; /* 18px */
+    text-decoration: none;
+    color: #F2E9E1;
+    font-weight: 500;
+    padding: 0.5rem 0.2rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.nav-link:hover {
+    border-bottom-color: #C46D5E; /* Terracota */
+    color: #ffffff;
+}
+
+/* ===== SECCIÓN DE BIENVENIDA (HERO) ===== */
+.hero {
+    background: linear-gradient(rgba(58, 40, 31, 0.8), rgba(58, 40, 31, 0.6)), 
+                url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+    background-color: #3A281F;
+    min-height: 28rem; /* 448px */
+    display: flex;
+    align-items: center;
+    margin: 2.5rem 0;
+    border-radius: 1.5rem;
+    box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+
+.hero-content {
+    background-color: rgba(242, 233, 225, 0.9); /* Crema translúcido */
+    padding: 2.5rem 2.8rem;
+    border-radius: 1.5rem;
+    max-width: 42rem;
+    backdrop-filter: blur(5px);
+    border: 2px solid #C46D5E;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3rem; /* 48px */
+    font-weight: 900;
+    line-height: 1.2;
+    color: #3A281F;
+    margin-bottom: 1rem;
+}
+
+.destacado {
+    color: #C46D5E; /* Terracota */
+    font-style: italic;
+}
+
+.hero-description {
+    font-size: 1.2rem; /* 19.2px */
+    margin-bottom: 2rem;
+    color: #3A281F;
+    font-weight: 400;
+}
+
+/* ===== BOTÓN ===== */
+.btn {
+    display: inline-block;
+    background-color: #C46D5E; /* Terracota */
+    color: #F2E9E1;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.8rem 2.2rem;
+    border-radius: 3rem;
+    border: 2px solid #C46D5E;
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #a85b4d; /* Terracota más oscuro */
+    border-color: #a85b4d;
+    box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.25);
+    transform: scale(1.03);
+}
+
+/* ===== SECCIÓN DE CARACTERÍSTICAS ===== */
+.caracteristicas {
+    margin: 3rem 0 4rem;
+}
+
+.caracteristicas h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #3A281F;
+    margin-bottom: 2rem;
+}
+
+.featured {
+    display: flex;
+    gap: 1.8rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffffff;
+    flex: 1 1 14rem;
+    padding: 2rem 1.2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    box-shadow: 0 0.3rem 0.8rem rgba(58, 40, 31, 0.1);
+    border: 1px solid #e0cfc0;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-0.3rem);
+    border-color: #C46D5E;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    color: #C46D5E;
+    margin-bottom: 0.8rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #3A281F;
+}
+
+/* ===== PIE DE PÁGINA (FOOTER) ===== */
+.footer {
+    background-color: #3A281F;
+    color: #F2E9E1;
+    margin-top: auto; /* Para que el footer se vaya al fondo si hay poco contenido */
+    padding: 2.5rem 0 1.5rem;
+    border-top: 0.4rem solid #C46D5E;
+    font-size: 1rem;
+}
+
+.footer .wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #C46D5E;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.footer-slogan {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #F2E9E1;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.footer-contact {
+    text-align: right;
+}
+
+.footer-contact p {
+    margin: 0.2rem 0;
+}
+
+.copyright {
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #b8a99a;
+    border-top: 1px dashed #C46D5E;
+    padding-top: 1.5rem;
+}
+
+/* ===== RESPONSIVE (adaptación a móviles) ===== */
+@media (max-width: 45rem) { /* 720px */
+    .header .wrapper {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .nav-menu {
+        gap: 1.2rem;
+        justify-content: center;
+    }
+    .footer .wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-contact {
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
