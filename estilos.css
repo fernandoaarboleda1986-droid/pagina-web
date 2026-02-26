@@ -91,7 +91,7 @@ h1, h2, h3, .logo-nombre, .nav-link, .btn, .footer-brand {
 }
 
 .nav-link:hover {
-    border-bottom-color: #C46D5E; /* Terracota */
+    border-bottom-color: #ce280b; /* Terracota */
     color: #ffffff;
 }
 
