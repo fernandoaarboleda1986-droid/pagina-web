@@ -38,7 +38,7 @@ h1, h2, h3, .logo-nombre, .nav-link, .btn, .footer-brand {
 
 /* ===== ENCABEZADO (HEADER) ===== */
 .header {
-    background-color: #3A281F; /* Marrón oscuro */
+    background-color: #412b21; /* Marrón oscuro */
     padding: 0.8rem 0;
     border-bottom: 0.25rem solid #C46D5E; /* Terracota */
     box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.1);
